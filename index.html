@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- This is for using taiwind needed for the daisy ui which is used for the login form template -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Daisy UI for login template of mine -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Login</title>
+  </head>
+
+  <body>
+    <form action="login.php" method="post">
+      <div class="hero min-h-screen">
+        <div class="hero-content w-full justify-center">
+          <div
+            class="card w-full max-w-lg shadow-2xl bg-white/20 backdrop-blur-md border border-white/30"
+          >
+            <div class="card-body">
+              <fieldset class="fieldset">
+                <label class="text-white">Username</label>
+                <input
+                  type="text"
+                  name="username"
+                  class="input input-bordered w-full bg-white/20 backdrop-blur-md border border-white/30 !font-bold !text-white"
+                  placeholder="Your name"
+                />
+
+                <label class="text-white">Password</label>
+                <input
+                  name="password"
+                  type="password"
+                  class="input input-bordered w-full bg-white/20 backdrop-blur-md border border-white/30 !font-bold !text-white"
+                  placeholder="Password"
+                />
+
+                <button class="btn btn-neutral mt-4 w-full font-bold text-xl">
+                  Login
+                </button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
