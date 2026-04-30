@@ -12,7 +12,7 @@ if($conn->connect_error)
 }
 else 
 {
-	echo"Connection successful";  // Used to print
+	
 	mysqli_select_db($conn,$dbname);
 }
 ?>
