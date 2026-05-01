@@ -93,12 +93,12 @@ if($step == '4' && $_SERVER['REQUEST_METHOD'] == 'POST'){
             <input type="hidden" name="driver_to_rate" value="<?php echo $selected_driver_id; ?>">
 
             <select name="rating" required class="w-full border border-gray-300 rounded px-3 py-2 mb-4">
-                <option value="">-- Select rating --</option>
-                <option value="1">1 - Poor</option>
-                <option value="2">2 - Fair</option>
-                <option value="3">3 - Good</option>
-                <option value="4">4 - Very Good</option>
-                <option value="5">5 - Excellent</option>
+                <option value="">Select rating</option>
+                <option value="1">1(Poor)</option>
+                <option value="2">2(Fair)</option>
+                <option value="3">3(Good)</option>
+                <option value="4">4(Very Good)</option>
+                <option value="5">5(Excellent)</option>
             </select>
 
             <button type="submit" class="w-full bg-black text-white py-2 rounded font-bold text-lg hover:bg-gray-800">
@@ -141,7 +141,7 @@ if($step == '4' && $_SERVER['REQUEST_METHOD'] == 'POST'){
             <div class="mb-4">
                 <label class="block font-semibold mb-1">Select Driver</label>
                 <select name="driver_id" required class="w-full border border-gray-300 rounded px-3 py-2">
-                    <option value="">-- Choose a driver --</option>
+                    <option value="">Choose a driver</option>
                     <?php while($driver = mysqli_fetch_assoc($drivers_result)): ?>
                         <option value="<?php echo $driver['driver_id']; ?>">
                             <?php echo $driver['d_first_name'] . " (" . $driver['c_type'] . ")"; ?>
@@ -153,7 +153,7 @@ if($step == '4' && $_SERVER['REQUEST_METHOD'] == 'POST'){
             <div class="mb-4">
                 <label class="block font-semibold mb-1">Select Route</label>
                 <select name="route_id" required class="w-full border border-gray-300 rounded px-3 py-2">
-                    <option value="">-- Choose a route --</option>
+                    <option value="">Choose a route</option>
                     <?php foreach($routes as $route): ?>
                         <option value="<?php echo $route['route_id']; ?>">
                             <?php echo $route['r_start'] . " → " . $route['r_end']; ?>
